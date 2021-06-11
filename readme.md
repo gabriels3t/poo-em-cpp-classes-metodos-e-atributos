@@ -1,6 +1,6 @@
 # Orientação a Objetos com C++: Classes, métodos e atributos
 # Descrição
-    Desenvolvendo uma aplicação de um Banco 
+    Desenvolvendo uma aplicação de um Banco Curso feito na alura 
 ## habilidades aprendidas:
 * Entenda a diferença entre o paradigma OO e procedural
 * Aprenda a utilizar construtores
