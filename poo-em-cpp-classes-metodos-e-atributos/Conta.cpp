@@ -13,3 +13,25 @@ void Conta::depositar(float valordeposito) {
     }
     saldo += valordeposito;
 }
+
+float Conta::getSaldo() const {
+    return saldo;
+}
+void Conta::setNomeTitular(std::string nome) {
+    nomeTitular = nome;
+}
+std::string Conta::getNomeTitular() {
+    return nomeTitular;
+}
+void Conta::setNumeroConta(std::string numero) {
+    numeroConta = numero;
+}
+std::string Conta::getNumeroConta() {
+    return numeroConta;
+}
+void Conta::setCpfTitular(std::string cpf) {
+    cpfTitular = cpf;
+}
+std::string Conta::getCpfTitular() {
+    return cpfTitular;
+}
