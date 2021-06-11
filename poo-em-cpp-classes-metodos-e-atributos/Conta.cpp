@@ -1,4 +1,10 @@
 #include "Conta.hpp"
+// fazendo o construtor assim, o compilador nao precisa alogar 2 vezes a memoria.
+//assim deixando o codigo um pouco mais rapido
+Conta::Conta(std::string numero, std::string cpf, std::string nome) 
+    : numeroConta(numero),cpfTitular(cpf),nomeTitular(nome),saldo(0.0f) {
+
+}
 
 void Conta::sacar(float valorSaque) {
     if (valorSaque < 0 || valorSaque > saldo) {
@@ -17,21 +23,12 @@ void Conta::depositar(float valordeposito) {
 float Conta::getSaldo() const {
     return saldo;
 }
-void Conta::setNomeTitular(std::string nome) {
-    nomeTitular = nome;
-}
-std::string Conta::getNomeTitular() {
+std::string Conta::getNomeTitular() const {
     return nomeTitular;
 }
-void Conta::setNumeroConta(std::string numero) {
-    numeroConta = numero;
-}
-std::string Conta::getNumeroConta() {
+std::string Conta::getNumeroConta() const {
     return numeroConta;
 }
-void Conta::setCpfTitular(std::string cpf) {
-    cpfTitular = cpf;
-}
-std::string Conta::getCpfTitular() {
+std::string Conta::getCpfTitular() const {
     return cpfTitular;
 }

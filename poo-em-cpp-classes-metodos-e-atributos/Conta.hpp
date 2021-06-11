@@ -9,16 +9,15 @@ private:
     std::string numeroConta;
     std::string cpfTitular;
     std::string nomeTitular;
-    float saldo =0.0f;
-public: 
+    float saldo;
+public:
+    Conta() = delete; //deletando o construdor padrão 
+    Conta(std::string numero, std::string cpf, std::string nome);
     void sacar(float valorSaque);
     void depositar(float valordeposito);
     float getSaldo() const; // deixando a função constante
-    void setNomeTitular(std::string nomeTitular);
-    std::string getNomeTitular();
-    void setNumeroConta(std::string numero);
-    std::string getNumeroConta();
-    void setCpfTitular(std::string cpf);
-    std::string getCpfTitular();
+    std::string getNomeTitular() const;
+    std::string getNumeroConta() const;
+    std::string getCpfTitular() const;
 
 };
