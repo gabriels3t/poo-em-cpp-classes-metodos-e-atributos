@@ -6,7 +6,8 @@ private:
 	std::string cpf;
 	
 public:
-	Cpf(std::string cpf);
+	explicit Cpf(std::string cpf); // obrigando a ser passado pelo construtor 
+	std::string getCpf();
 private:
 	void cpfExiste();
 	int* pegandoNumerosCpf();

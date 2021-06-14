@@ -5,7 +5,16 @@ Cpf::Cpf(std::string numero) :cpf(numero) {
 	cpfExiste();
 
 }
-// arrumar para 2 funções 
+
+
+std::string Cpf::getCpf() {
+	return cpf;
+}
+
+
+
+
+// Verificar cpf 
 void Cpf::cpfExiste() {	
 	verificandoPrimeiroDigito();
 	verificandoSegundoDigito();
@@ -37,8 +46,7 @@ void Cpf::verificandoPrimeiroDigito() {
 	}
 	int penultimoDigito = *(numeroCpf+9);
 	int verificador = verificadorDosUltimosDigitos(somatoria);
-	std::cout << somatoria << std::endl;
-	
+
 	if (penultimoDigito != verificador) {
 
 		mensagemCpfNaoExiste();
@@ -68,7 +76,7 @@ int* Cpf::pegandoNumerosCpf() {
 		for (int i = 0; i < 14; i++) {
 			bool naoTemNumero = cpf[i] != ponto[0]&& cpf[i] != traco[0];
 			if (naoTemNumero) {
-				numerosCpf[j] = cpf[i]-'0';
+				numerosCpf[j] = cpf[i]-'0'; // -'0' para transformar um nomero da tabela ascii em numero int
 				j++;
 					
 			}
