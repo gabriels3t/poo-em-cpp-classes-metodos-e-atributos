@@ -1,7 +1,7 @@
 #include "Titular.hpp"
 #include <iostream>
 
-Titular::Titular(std::string cpf, std::string nome):cpf(cpf),nome(nome) {
+Titular::Titular(Cpf cpf, std::string nome):cpf(cpf),nome(nome) {
     verificaTamanhoDoNome();
 }
 
@@ -13,7 +13,4 @@ void Titular::verificaTamanhoDoNome() {
 }
 std::string Titular::getNome() {
     return nome;
-}
-std::string Titular::getCpf() {
-    return cpf;
 }
